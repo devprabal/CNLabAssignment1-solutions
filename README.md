@@ -115,3 +115,72 @@ As can be seen from the stats that the server of host2 (libgen.io) is farther th
 | 4 | 1024 | 36.897 |
 
 ![Fig1.2](output_39_0.png "change in packet size affects avg rtt")
+
+_________________
+
+## Q2 
+```
+ifconfig - configure a network interface
+ifconfig [interface]
+ifconfig interface [aftype] options | address ...
+```
+
+Ifconfig is used to configure the kernel-resident network interfaces. It is used at boot time to set up interfaces as necessary. After that, it is usually only needed when debugging or when system tuning is needed. If no arguments are given, ifconfig displays the status of the currently active interfaces. If a single interface argument is given, it displays the status of the given interface only; if a single -a argument is given, it displays the status of all interfaces, even those that are down.
+
+![Fig2.1](ifconfig.png "ifconfig")
+
+_________________
+
+## Q4 
+
+### information about hosts
+
+|  | registered domain | IP |
+| --- | --- | --- |
+| 0 | github.com | 192.30.253.113 |
+| 1 | 1e100.net | 216.239.36.5 |
+| 2 | primacom.net | 77.64.170.23 |
+| 3 | NaN | 207.244.67.218 |
+| 4 | facebook.com | 31.13.92.36 |
+
+
+### hop counts for each host in each time slot 
+
+|  | Input | Registered Domain | Time of day | Hop count |
+| --- | --- | --- | --- | --- |
+| 0 | 192.30.253.113 | github.com | 19 | 10 |
+| 10 | 192.30.253.113 | github.com | 22 | 10 |
+| 20 | 192.30.253.113 | github.com | 23 | 10 |
+| 30 | 216.239.36.5 | 1e100.net | 19 | 5 |
+| 35 | 216.239.36.5 | 1e100.net | 22 | 5 |
+| 40 | 216.239.36.5 | 1e100.net | 23 | 5 |
+| 45 | 77.64.170.23 | primacom.net | 19 | 20 |
+| 65 | 77.64.170.23 | primacom.net | 22 | 20 |
+| 85 | 77.64.170.23 | primacom.net | 23 | 20 |
+| 105 | 207.244.67.218 | NaN | 19 | 10 |
+| 115 | 207.244.67.218 | NaN | 22 | 10 |
+| 125 | 207.244.67.218 | NaN | 23 | 10 |
+| 135 | 31.13.92.36 | facebook.com | 19 | 13 |
+| 148 | 31.13.92.36 | facebook.com | 22 | 13 |
+| 161 | 31.13.92.36 | facebook.com | 23 | 13 |
+
+Time of day is in 24 hours. [19 means 7:00 pm] (with least count of 60 minutes)
+
+### common hops between two routes
+
+|  | Input | Registered Domain | Host name |
+| --- | --- | --- | --- |
+| 49 | 77.64.170.23 | primacom.net | 100ge5-1.core2.ash1.he.net |
+| 138 | 31.13.92.36 | facebook.com | 100ge5-1.core2.ash1.he.net |
+| 48 | 77.64.170.23 | primacom.net | 100ge8-1.core1.ash1.he.net |
+| 137 | 31.13.92.36 | facebook.com | 100ge8-1.core1.ash1.he.net |
+| 47 | 77.64.170.23 | primacom.net | 100ge8-1.core1.atl1.he.net |
+| 136 | 31.13.92.36 | facebook.com | 100ge8-1.core1.atl1.he.net |
+| 50 | 77.64.170.23 | primacom.net | 100ge8-1.core1.nyc5.he.net |
+| 139 | 31.13.92.36 | facebook.com | 100ge8-1.core1.nyc5.he.net |
+| 46 | 77.64.170.23 | primacom.net | v509.core1.dal1.he.net |
+| 135 | 31.13.92.36 | facebook.com | v509.core1.dal1.he.net |
+| 1 | 192.30.253.113 | github.com | vb2000d1.rar3.dallas-tx.us.xo.net |
+| 106 | 207.244.67.218 | NaN | vb2000d1.rar3.dallas-tx.us.xo.net |
+
+_________________
