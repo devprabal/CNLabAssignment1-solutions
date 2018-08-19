@@ -240,4 +240,19 @@ Time of day is in 24 hours. [19 means 7:00 pm] (with least count of 60 minutes)
 
 _________________
 
+## Q5
+
+**ARP** _Address Resolution Protocol_ is a communication protocol used for discovering physical address associated with given network address. Typically, ARP is a network layer to data link layer mapping process, which is used to discover MAC address for given Internet Protocol Address.
+In order to send the data to destination, having IP address is necessary but not sufficient; we also need the physical address of the destination machine. ARP is used to get the physical address (MAC address) of destination machine.
+ARP is  used  to  find  the media  access control  address  of  a  network neighbour for a given IPv4 Address.
+
+`arp`  manipulates or displays the kernel's IPv4 network neighbour cache. It can add entries to the table, delete one or display the current content.
+
+![Fig3.3](arp-add-del.png)
+
+
+Entries in the ARP table can be static; created by manual configuration or dynamic; created automatically by the normal operation of the protocol. Static entries remain in the table forever and are not timed out.
+
+The default timeout timer for is 4 hours for Cisco devices, this means that a dynamic ARP entry will remain for 4 hours in the cache table before the router attempt to refresh the entry. If the entry is no longer needed it will be removed.
+
 
