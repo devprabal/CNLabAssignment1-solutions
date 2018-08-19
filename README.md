@@ -1,3 +1,10 @@
+>**Instructions**
+>
+>  This markdown file is prepared using [Online Markdown Editor](https://dillinger.io/). It requires certain files to display images within it. It is therefore advised to view this markdown here on github repo or clone the entire repo to your local machine.
+> 
+> The source codes and related csv/spreadsheet files which were used in the making of this assignment are included in a seperate repo. It is recommended to have a view on this [repo](https://github.com/devprabal/CNLabAssignment1-source).
+>
+> The answers are provided below.
 ## Q1
 
 ### information about 5 hosts selected 
