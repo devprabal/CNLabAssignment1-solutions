@@ -131,6 +131,61 @@ Ifconfig is used to configure the kernel-resident network interfaces. It is used
 
 _________________
 
+## Q3
+
+Netstat command displays various network related information such as network connections, routing tables, interface statistics, masquerade connections, multicast memberships etc.,
+
+This program is mostly obsolete.  Replacement for netstat is ss.  Replacement  for  netstat  -r  is  ip route. Replacement for netstat -i is ip -s link.  Replacement for netstat -g is ip maddr.
+
+Netstat prints information about the Linux networking subsystem.  The type of information printed is controlled by the first argument, as follows:
+
+(none)
+       By default, netstat displays a list of open sockets.  If you don't specify
+       any address families, then the active sockets of  all  configured  address
+       families will be printed.
+
+--route, -r
+       Display  the  kernel  routing  tables. See the description in route(8) for
+       details.  netstat -r and route -e produce the same output.
+
+--groups, -g
+       Display multicast group membership information for IPv4 and IPv6.
+
+--interfaces, -i
+       Display a table of all network interfaces.
+
+--masquerade, -M
+       Display a list of masqueraded connections.
+
+--statistics, -s
+       Display summary statistics for each protocol.
+
+`netstat -tn`
+
+![Fig3.1](netstat_tcp_established.png)
+
+Local address : It is the IP address of the local computer (your device) and the port number being used. This address is assigned to you by your router DHCP servers.
+
+Foreign address : It is the IP address and port number of the remote computer to which the socket is connected.
+
+`netstat -r : To get the kernel routing information.`
+
+![Fig3.2](netstat-r.png)
+
+`netstat -i : To get the list of network interfaces.`
+
+![Fig3.3](netstat-i.png)
+
+**loopback**  `lo`
+
+The loopback device is a special, virtual network interface that your computer uses to communicate with itself. It is used mainly for diagnostics and troubleshooting, and to connect to servers running on the local machine.
+
+The loopback interface does not represent any actual hardware, but exists so applications running on your computer can always connect to servers on the same machine.
+
+For example, if you run a web server, you have all your web documents and could examine them file by file. You may be able to load the files in your browser too.
+
+_________________
+
 ## Q4 
 
 ### information about hosts
@@ -184,3 +239,5 @@ Time of day is in 24 hours. [19 means 7:00 pm] (with least count of 60 minutes)
 | 106 | 207.244.67.218 | NaN | vb2000d1.rar3.dallas-tx.us.xo.net |
 
 _________________
+
+
